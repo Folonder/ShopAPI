@@ -1,0 +1,12 @@
+﻿version: '3.9'
+
+services:
+  shopapi:
+    image: shopapi:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./ShopAPI/Database:/app/Database
